@@ -1,4 +1,4 @@
 /Django/.idea
 /Django/venv
 /Django/db.sqlite3
-
+migrations/
