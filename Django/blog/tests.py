@@ -40,6 +40,53 @@ class TestView(TestCase):
         )
         self.post_003.tags.add(self.tag_python_kor)
         self.post_003.tags.add(self.tag_python)
+
+    def test_update_post(self):
+        update_post_url=f'/blog/update_post/{self.post_003.pk}/'
+
+        #not login
+        response=self.client.get(update_post_url)
+        self.assertNotEqual(response.status_code, 200)
+
+        #login but not writter
+        self.assertNotEqual(self.post_003.author, self.user_trump)
+        self.client.login(
+            username=self.user_trump.username,
+            password='1q2w3e4r!'
+        )
+
+        response=self.client.get(update_post_url)
+        self.assertEqual(response.status_code,403)
+
+        #wirtter login
+        self.client.login(
+            username=self.post_003.author.username,
+            password='somepassword'
+        )
+
+        response=self.client.get(update_post_url)
+        self.assertEqual(response.status_code,200)
+        soup=BeautifulSoup(response.content,'html.parser')
+
+        self.assertEqual('Edit Post - Blog', soup.title.text)
+        main_area=soup.find('div', id='main-area')
+        self.assertIn('Edit Post', main_area.text)
+
+        response=self.client.post(
+            update_post_url,
+            {
+                'title':'3rd edited',
+                'content':'hello world edit',
+                'category':self.category_music.pk
+            },
+            follow=True
+        )
+        soup = BeautifulSoup(response.content,'html.parser')
+        main_area=soup.find('div',id='main-area')
+        self.assertIn('3rd edited',main_area.text)
+        self.assertIn('hello world edit',main_area.text)
+        self.assertIn(self.category_music.name,main_area.text)
+
     def test_create_post(self):
         response=self.client.get('/blog/create_post/')
         self.assertNotEqual(response.status_code,200)

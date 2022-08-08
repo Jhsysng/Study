@@ -15,6 +15,10 @@
         <div class="text-muted fst-italic mb-2">meta contents</div>
         <!--autor-->
         <p class="lead"> by <a href="#">{{post.author|upper}}</a></p>
+        <!--update-->
+        {% if user.is_authenticated and user == post.author %}
+            <a class="btn btn-info btn-sm float-right" href="/blog/update_post/{{post.pk}}/" role="button"><i class="fa-solid fa-pen"></i>Edit</a>
+        {% endif %}
         <!-- Date/time-->
         <p>{{post.created_at}}</p>
         <!-- Post categories-->
