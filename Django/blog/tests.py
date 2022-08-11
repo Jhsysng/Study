@@ -245,11 +245,6 @@ class TestView(TestCase):
         self.assertIn('아직 게시물이 없습니다.',main_area.text)
 
     def test_post_detail(self):
-        '''post_000=Post.objects.create(
-            title='1st 포스트',
-            content='hihiihihim going library later',
-            author=self.user_trump,
-        )'''
 
         self.assertEqual(self.post_001.get_absolute_url(),'/blog/1/')
 
@@ -280,47 +275,102 @@ class TestView(TestCase):
         self.assertIn(self.comment_001.content,comment_001_area.text)
 
     def test_comment_form(self):
-        self.assertEqual(Comment.objects.count(),1)
-        self.assertEqual(self.post_001.comment_set.count(),1)
+        self.assertEqual(Comment.objects.count(), 1)
+        self.assertEqual(self.post_001.comment_set.count(), 1)
 
-        #not login
-        response=self.client.get(self.post_001.get_absolute_url())
-        self.assertEqual(response.status_code,200)
-        soup=BeautifulSoup(response.content,'html.parser')
+        # not login
+        response = self.client.get(self.post_001.get_absolute_url())
+        self.assertEqual(response.status_code, 200)
+        soup = BeautifulSoup(response.content, 'html.parser')
 
-        comment_area=soup.find('div',id='comment-area')
-        self.assertIn('Log in and leave comment',comment_area.text)
-        self.assertFalse(comment_area.find('form',id='comment-form'))
+        comment_area = soup.find('div', id='comment-area')
+        self.assertIn('Log in and leave comment', comment_area.text)
+        self.assertFalse(comment_area.find('form', id='comment-form'))
 
-        #login
-        self.client.login(username='obama',password='somepassword')
-        response=self.client.get(self.post_001.get_absolute_url())
-        self.assertEqual(response.status_code,200)
-        soup=BeautifulSoup(response.content,'html.parser')
+        # login
+        self.client.login(username='obama', password='somepassword')
+        response = self.client.get(self.post_001.get_absolute_url())
+        self.assertEqual(response.status_code, 200)
+        soup = BeautifulSoup(response.content, 'html.parser')
 
-        comment_area=soup.find('div',id='comment-area')
-        self.assertNotIn('Log in and leave a comment',comment_area.text)
+        comment_area = soup.find('div', id='comment-area')
+        self.assertNotIn('Log in and leave a comment', comment_area.text)
 
-        comment_form=comment_area.find('div',id='comment-form')
-        #self.assertTrue(comment_form.find('textarea',id='id_content'))
-        response=self.client.post(
-            self.post_001.get_absolute_url()+'new_comment/',
+        comment_form = comment_area.find('form', id='comment-form')
+        self.assertTrue(comment_form.find('textarea',id='id_content'))
+        response = self.client.post(
+            self.post_001.get_absolute_url() + 'new_comment/',
             {
-                'content':'obama\'s comment',
+                'content': 'obama\'s comment',
             },
             follow=True
         )
-        self.assertEqual(response.status_code,200)
-        self.assertEqual(Comment.objects.count(),2)
-        self.assertEqual(self.post_001.comment_set(),2)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(Comment.objects.count(), 2)
+        self.assertEqual(self.post_001.comment_set.count(), 2)
 
-        new_comment=Comment.objects.last()
+        new_comment = Comment.objects.last()
 
-        soup=BeautifulSoup(response.content,'html.parser')
-        self.assertIn(new_comment.post.title,soup.title.text)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        self.assertIn(new_comment.post.title, soup.title.text)
 
-        comment_area=soup.find('div',id='comment-area')
-        new_comment_div=comment_area.find('div',id=f'comment-{new_comment.pk}')
-        self.assertIn('obama',new_comment_div.text)
-        self.assertIn('obama\'s comment',new_comment_div.text)
+        comment_area = soup.find('div', id='comment-area')
+        new_comment_div = comment_area.find('div', id=f'comment-{new_comment.pk}')
+        self.assertIn('obama', new_comment_div.text)
+        self.assertIn('obama\'s comment', new_comment_div.text)
+
+    def test_comment_update(self):
+        comment_by_trump = Comment.objects.create(
+            post=self.post_001,
+            author=self.user_trump,
+            content="trump's comment"
+        )
+
+        response = self.client.get(self.post_001.get_absolute_url())
+        self.assertEqual(response.status_code, 200)
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        comment_area = soup.find('div', id='comment-area')
+        self.assertFalse(comment_area.find('a', id='comment-1-update-btn'))
+        self.assertFalse(comment_area.find('a', id='comment-2-update-btn'))
+
+        # login
+        self.client.login(username='obama',password='somepassword')
+        response = self.client.get(self.post_001.get_absolute_url())
+        self.assertEqual(response.status_code, 200)
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        comment_area = soup.find('div', id='comment-area')
+        self.assertFalse(comment_area.find('a', id='comment-2-update-btn'))
+        comment_001_update_btn = comment_area.find('a', id='comment-1-update-btn')
+        self.assertIn('edit', comment_001_update_btn.text)
+        self.assertEqual(comment_001_update_btn.attrs['href'], '/blog/update_comment/1/')
+
+
+        response = self.client.get('/blog/update_comment/1/')
+        self.assertEqual(response.status_code, 200)
+
+        soup = BeautifulSoup(response.content, 'html.parser')
+        #update_comment_form = soup.find('form', id='comment-from')
+        #content_textarea = update_comment_form.find('textarea', id='id_content')
+        #self.assertIn(self.comment_001.content, content_textarea.text)
+
+
+        self.assertEqual('Edit Comment - Blog', soup.title.text)
+
+
+        response = self.client.post(
+            f'/blog/update_comment/{self.comment_001.pk}/',
+            {
+                'content': "obama's comment edit",
+            },
+            follow=True
+        )
+
+        self.assertEqual(response.status_code, 200)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        comment_001_div = soup.find('div', id='comment-1')
+        self.assertIn("obama's comment edit", comment_001_div.text)
+        self.assertIn('Updated:', comment_001_div.text)
+
 # Create your tests here.
