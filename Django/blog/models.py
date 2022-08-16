@@ -62,6 +62,12 @@ class Comment(models.Model):
     created_at=models.DateTimeField(auto_now_add=True)
     modified_at=models.DateTimeField(auto_now=True)
 
+    def get_avatar_url(self):
+        if self.author.socialaccount_set.exists():
+            return self.author.socialaccount_set.first().get_avatar_url()
+        else:
+            return 'http://placehold.it/50x50'
+
     def __str__(self):
         return f'{self.author}::{self.content}'
 
