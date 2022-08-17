@@ -1,17 +1,97 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Developer Alex</title>
+    <title>Developer</title>
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}" media="screen">
+    <script src="https://kit.fontawesome.com/8a436ae004.js" crossorigin="anonymous"></script>
 </head>
 <body>
+{% include 'blog/navbar.html' %}
+
+<section>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>hello I'm alex</h1>
+                <br/>
+                <p class="ead">
+                    Music cycle, computer, security, cloud
+                    data
+                </p>
+
+                <ul>
+                    <li>EXPERIENCE</li>
+                    <ul>
+                        <li>None-null(2020.08~2022.02)</li>
+                        <li>???-???(????.??~????.??)</li>
+                    </ul>
+                    <li>EDU</li>
+                    <ul>
+                        <li>now..</li>
+                    </ul>
+                    <li>Project</li>
+                    <ul>
+                        <li>Auto File encrypt</li>
+                        <li>Share Cloud</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <img class="img-fluid" src="{% static 'single_pages/images/me.jpeg' %}">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bt-ligh margin-for-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Portfolio</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#kota_isla">
+                    <img class="card-img-top" src="{% static 'single_pages/images/kota_isla.jpeg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">bki-island</h5>
+                        <p>island in Kota</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card" data-bs-toggle="modal" data-bs-targe="#naksna">
+                    <img class="card-img-top" src="{% static 'single_pages/images/naksan.jpeg' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">naksan</h5>
+                        <p>2019</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#laptop">
+                    <img class="card-img-top" src="{% static 'single_pages/images/laptop.jpeg' %}">
+                    <div class="card-body">
+                        <h5 class="ard-title">laptop</h5>
+                        <p>at 2020.06</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="fixed-bottom">
+    {% include 'blog/footer.html' %}
+</div>
 <nav>
     <a href="/blog/">Blog</a>
     <a href="/about_me/">About me</a>
 </nav>
-
-<h1>hello i'm alex</h1>
-<h2>이력</h2>
-<h3>not now</h3>
+<!-- Modal-->
 </body>
 </html>
