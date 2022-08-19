@@ -3,3 +3,5 @@
 /Django/db.sqlite3
 migrations/
 /Django/_media/
+/Django/.env.prod
+/Django/.env.prod.db
