@@ -1,23 +1,27 @@
 version: '3'
 
 services:
-    web:
-        build: .
-        command: gunicorn do_it_django_prj.wsgi:application --bind 0.0.0.0:8000
-        command: python manage.py runserver 0.0.0.0:8000
-        volumes:
-            - ./:/usr/src/app/
-        ports:
-            - 8000:8000
-        env_file:
-            - ./.env.prod
-        depends_on:
-            - db
-    db:
-        image: postgres:12.0-alpine
-        volumes:
-            - postgres_data:/var/lib/postgresql/data/
-        env_file:
-            - ./.env.prod.db
+  nginx:
+    build:
+      -
+  web:
+    build: .
+    command: gunicorn do_it_django_prj.wsgi:application --bind 0.0.0.0:8000 --timeout 100
+    volumes:
+      - ./:/usr/src/app/
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env.prod
+    depends_on:
+      - db
+  db:
+    image: postgres:12.0-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=do_it_django_db_user_prod
+      - POSTGRES_PASSWORD=do_it_django_db_password_prod
+      - POSTGRES_DB=db
 volumes:
-    postgres_data:
+  postgres_data:
