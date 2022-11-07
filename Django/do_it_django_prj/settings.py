@@ -31,7 +31,8 @@ if os.environ.get('DJANGO_ALLOWED_HOSTS'):
     ALLOWED_HOSTS=os.environ.get('DJANGO_ALLOWED_HOSTS').split(' ')
 else:
     ALLOWED_HOSTS=[]
-
+    ALLOWED_HOSTS.append("54.180.112.4")
+    ALLOWED_HOSTS.append("127.0.0.1")
 
 # Application definition
 
