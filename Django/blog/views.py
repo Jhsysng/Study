@@ -57,7 +57,7 @@ class PostDetail(DetailView):
         return context
 
 class PostUpdate(LoginRequiredMixin,UpdateView):
-    model=Post
+    model = Post
     fields =['title','hook_text','content','head_image','file_upload','category','tags']
 
     template_name='blog/post_update_form.html'
@@ -167,6 +167,8 @@ def tag_page(request,slug):
             'no_category_post_count':Post.objects.filter(category=None).count(),
         }
     )
+
+
 def new_comment(request,pk):
     if request.user.is_authenticated:
         post=get_object_or_404(Post,pk=pk)
@@ -174,15 +176,16 @@ def new_comment(request,pk):
         if request.method=='POST':
             comment_form=CommentForm(request.POST)
             if comment_form.is_valid():
-                comment=comment_form.save(commit=False)
+                comment = comment_form.save(commit=False)
                 comment.post=post
-                comment.author=request.user
+                comment.author = request.user
                 comment.save()
                 return redirect(comment.get_absolute_url())
         else:
             return redirect(post.get_absolute_url())
     else:
         raise PermissionDenied
+
 
 def delete_comment(request,pk):
     comment=get_object_or_404(Comment,pk=pk)
