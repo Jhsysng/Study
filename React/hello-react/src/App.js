@@ -1,10 +1,9 @@
-import Say from './Say';
 import React,{ Component} from "react"
 import './App.css';
-import {useDebugValue} from "react";
+import EventPractice from "./EventPractice";
 
 function App() {
-    return <Say/>
+    return <EventPractice/>
 }
 
 export default App;
