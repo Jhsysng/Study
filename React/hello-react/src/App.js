@@ -1,9 +1,13 @@
 import React,{ Component} from "react"
 import './App.css';
-import EventPractice from "./EventPractice";
+import IterationSample from "./IterationSample";
 
-function App() {
-    return <EventPractice/>
+class App extends Component {
+    render(){
+        return(
+            <IterationSample/>
+        )
+    }
 }
 
 export default App;
