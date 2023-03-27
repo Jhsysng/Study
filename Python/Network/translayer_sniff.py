@@ -4,7 +4,7 @@ from socket import *
 
 def parse_ip_header(payload):
     pre_ip_headers=struct.unpack("!BBHHHBBH4s4s",payload[:20])
-    ihl=(pre_ip_headers[0]&0x0F)*4
+    ihl=(pre_ip_headers[0]&0x0F)*4 #ihl: ip header length
     ip_payloads=payload[ihl:]
     return pre_ip_headers, ip_payloads
 
@@ -21,4 +21,69 @@ def parse_tcp_header(payload):
 def parse_udp_header(payload):
     pre_udp_headers=struct.unpack("!HHHH",payload[:8])
     return pre_udp_headers,payload[8:]
+
+def tcp_flags(int_num):
+    return str(bin(int_num))[2:].zfill(8)
+
+def parsing(host):
+    if os.name=="nt":
+        sock_protocol=IPPROTO_IP
+    else:
+        sock_protocol=IPPROTO_ICMP
+    sock=socket(AF_INET, SOCK_RAW, sock_protocol)
+    sock.bind((host,0))
+
+    sock.setsockopt(IPPROTO_IP, IP_HDRINCL, 1)
+
+    if os.name=="nt":
+        sock.ioctl(SIO_RCVALL, RCVALL_ON)
+
+    packet_number=0
+    try:
+        while True:
+            packet_number+=1
+            data=sock.recvfrom(65535)
+            ip_headers,ip_payloads=parse_ip_header(data[0])
+            ip_source_address=inet_ntoa(ip_headers[8])
+            ip_destination_address=inet_ntoa(ip_headers[9])
+            if ip_headers[6]==6:
+                print(f"{packet_number} th packet \n")
+                print(f"[TCP] {ip_source_address}=>{ip_destination_address}")
+                tcp_headers, tcp_payloads=parse_tcp_header(ip_payloads)
+                print("Source Port: ", tcp_headers[0])
+                print("Destination Port ",tcp_headers[1])
+                print("Seq Number: ", tcp_headers[2])
+                print("Ack Number: ", tcp_headers[3])
+                print("Offset(Length)", tcp_headers[4]>>4)
+                print("TCP Flags: ")
+                print(">>CEUAPRSF")
+                print(">>", tcp_flags(tcp_headers[5]))
+                print("WindowSize: ",tcp_headers[6])
+                print("Checksum: ",tcp_headers[7])
+                print("Urgent Pointer: ",tcp_headers[8])
+                print("TCP payloads: ")
+                print(tcp_payloads.decode("utf-8","ignore"))
+            elif ip_headers[6]==17: #UDP
+                print(f"{packet_number} th packet\n")
+                print(f"[UDP] {ip_source_address}=>{ip_destination_address}")
+                udp_headers, udp_payloads=parse_udp_header(ip_payloads)
+                print("Source Port: ",udp_headers[0])
+                print("Destination Port: ", udp_headers[1])
+                print("Length: ", udp_headers[2])
+                print("Checksum: ",udp_headers[3])
+                print("UDP Payloads: ")
+                print(udp_payloads.decode("utf-8","ignore"))
+            print("="*10)
+
+    except KeyboardInterrupt:
+        if os.name=="nt": #win os
+            sock.ioctl(SIO_RCVALL, RCVALL_OFF)
+
+def main():
+    host="192.168.0.83"
+    print("START SNIFFING at[%s]"%host)
+    parsing(host)
+
+if __name__=="__main__":
+    main()
 
