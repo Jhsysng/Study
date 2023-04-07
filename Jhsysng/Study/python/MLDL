@@ -1,0 +1,99 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "mount_file_id": "1dqFwbkUXhebDc1QajLYlzk5ZU2XE_PBn",
+      "authorship_tag": "ABX9TyNF3/UrnOF/7L5a5sLvVq24"
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WSyl1WS68WeX",
+        "outputId": "c0ac4b40-3408-4e46-938c-d65801afdad9"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cloning into 'Study'...\n",
+            "remote: Enumerating objects: 1494, done.\u001b[K\n",
+            "remote: Counting objects: 100% (667/667), done.\u001b[K\n",
+            "remote: Compressing objects: 100% (425/425), done.\u001b[K\n",
+            "remote: Total 1494 (delta 240), reused 567 (delta 156), pack-reused 827\u001b[K\n",
+            "Receiving objects: 100% (1494/1494), 13.41 MiB | 22.04 MiB/s, done.\n",
+            "Resolving deltas: 100% (659/659), done.\n"
+          ]
+        }
+      ],
+      "source": [
+        "!git clone https://github.com/Jhsysng/Study.git\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8UxJKJUg8z2M",
+        "outputId": "6aa39e91-1ebe-45c3-93bc-32302668c2ce"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "total 20\n",
+            "drwxr-xr-x 1 root root 4096 Apr  7 09:01 .\n",
+            "drwxr-xr-x 1 root root 4096 Apr  7 08:59 ..\n",
+            "drwxr-xr-x 4 root root 4096 Apr  5 13:29 .config\n",
+            "drwxr-xr-x 1 root root 4096 Apr  5 13:30 sample_data\n",
+            "drwxr-xr-x 7 root root 4096 Apr  7 09:01 Study\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import drive\n",
+        "drive.mount('/content/drive')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IFyKhQ_m9MZE",
+        "outputId": "985ac5a1-adae-4005-b3d1-5ba85b9547b8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(\"/content/drive\", force_remount=True).\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
