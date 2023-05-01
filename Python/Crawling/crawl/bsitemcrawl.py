@@ -1,18 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://shop.hakhub.net/"
+url = "http://www.jeju.go.kr/culture/dialect/dictionary.htm"
 
 r = requests.get(url)
 soup = BeautifulSoup(r.text, "html.parser")
-elem_li = soup.find_all("li", {"class": "product"})
-
-for index, li in enumerate(elem_li):
-    print(f"\n {index+1}상품")
-    print(li.find("h2",{"class":"woocommerce-loop-product__title"}).text)
-    print(li.find("span", {"class":"price"}).text)
-
-    try:
-        print(li.find("strong", {"class": "rating"}).text)
-    except Exception as e:
-        print("price NONE")
+choose = soup.select_one("#sub > div.container > div:nth-child(2) > div.col-lg-9.col-md-9.col-sm-12.col-xs-12.sub-newcontents > div.iframe-responsive > div > div.table-responsive > table > tbody > tr")
+print(choose)
+chooses = soup.select("#sub > div.container > div:nth-child(2) > div.col-lg-9.col-md-9.col-sm-12.col-xs-12.sub-newcontents > div.iframe-responsive > div > div.table-responsive > table > tbody > tr > a")
+for c in chooses:
+    print(c)

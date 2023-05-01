@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e439e574-06f7-4789-83b4-530298d84f32" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Crawling/crawl/newscommentcrawl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crawling/crawl/chromedriver_mac_arm64.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crawling/crawl/seleniumcrawl.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawling/crawl/seleniumcrawl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crawling/crawl/bsitemcrawl.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawling/crawl/bsitemcrawl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/SpringJpaAdvanced" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SpringJpaAdvanced" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +24,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file:///Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/urllib/request.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/venv/lib/python3.10/site-packages/PIL/JpegImagePlugin.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,7 +68,8 @@
       <workItem from="1680703595453" duration="3109000" />
       <workItem from="1680786879385" duration="6710000" />
       <workItem from="1680835909046" duration="656000" />
-      <workItem from="1680965922529" duration="2476000" />
+      <workItem from="1680965922529" duration="4607000" />
+      <workItem from="1681298809443" duration="2766000" />
     </task>
     <servers />
   </component>
@@ -88,7 +90,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python$commentup.coverage" NAME="commentup Coverage Results" MODIFIED="1680791655287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
     <SUITE FILE_PATH="coverage/Python$ip.coverage" NAME="ip Coverage Results" MODIFIED="1679403944641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
-    <SUITE FILE_PATH="coverage/Python$bsitemcrawl.coverage" NAME="bsitemcrawl Coverage Results" MODIFIED="1680788754688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
-    <SUITE FILE_PATH="coverage/Python$seleniumcrawl.coverage" NAME="seleniumcrawl Coverage Results" MODIFIED="1680968443137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
+    <SUITE FILE_PATH="coverage/Python$seleniumlogin.coverage" NAME="seleniumlogin Coverage Results" MODIFIED="1681094580254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
+    <SUITE FILE_PATH="coverage/Python$newscommentcrawl.coverage" NAME="newscommentcrawl Coverage Results" MODIFIED="1681360896045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
+    <SUITE FILE_PATH="coverage/Python$seleniumcrawl.coverage" NAME="seleniumcrawl Coverage Results" MODIFIED="1680968468374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
+    <SUITE FILE_PATH="coverage/Python$bsitemcrawl.coverage" NAME="bsitemcrawl Coverage Results" MODIFIED="1681361010411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
   </component>
 </project>
