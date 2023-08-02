@@ -2,9 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e439e574-06f7-4789-83b4-530298d84f32" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Crawling/crawl/newscommentcrawl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TEST/commute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/10819.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/11048.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/1285.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/13414.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/1475.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/1541.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/15683.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/15686.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/16234.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/1753.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/17836.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/17845.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/18111.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/2108.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/2156.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/2304.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/2407.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/2468.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/2477.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/2493.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/2503.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/3049.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/3085.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/5397.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/5582.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/python1343.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/좆열돌리기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/ssia-ch2-ex1/src/main/java/com/security/ssiach2ex1/config/ProjectConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/ssia-ch2-ex1/src/main/java/com/security/ssiach2ex1/controller/Hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/planner/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/planner/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/planner/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/planner/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/planner/store/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/planner/store/WiredTiger.turtle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/planner/store/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/planner/store/WiredTiger.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/planner/store/collection-4--765191395200796180.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/planner/store/collection-4--765191395200796180.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/planner/store/diagnostic.data/metrics.2023-05-05T07-16-51Z-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/planner/store/diagnostic.data/metrics.2023-05-05T07-16-51Z-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/planner/store/diagnostic.data/metrics.interim" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/planner/store/diagnostic.data/metrics.interim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/planner/store/index-5--765191395200796180.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/planner/store/index-5--765191395200796180.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/planner/store/index-6--765191395200796180.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/planner/store/index-6--765191395200796180.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/planner/store/journal/WiredTigerLog.0000000003" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/planner/store/journal/WiredTigerLog.0000000003" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPI/planner/store/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPI/planner/store/sizeStorer.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crawling/crawl/bsitemcrawl.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawling/crawl/bsitemcrawl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solving/1012.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/1012.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring/SpringJpaAdvanced" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SpringJpaAdvanced" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +63,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file:///Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/decoder.py" root0="SKIP_INSPECTION" />
     <setting file="file:///Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/urllib/request.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/venv/lib/python3.10/site-packages/PIL/JpegImagePlugin.py" root0="SKIP_INSPECTION" />
   </component>
@@ -70,6 +111,20 @@
       <workItem from="1680835909046" duration="656000" />
       <workItem from="1680965922529" duration="4607000" />
       <workItem from="1681298809443" duration="2766000" />
+      <workItem from="1685681015002" duration="1262000" />
+      <workItem from="1688188622828" duration="3473000" />
+      <workItem from="1688274433269" duration="15308000" />
+      <workItem from="1688382428131" duration="4124000" />
+      <workItem from="1688872750145" duration="27396000" />
+      <workItem from="1689473942592" duration="5895000" />
+      <workItem from="1689565195664" duration="3368000" />
+      <workItem from="1689592070402" duration="187000" />
+      <workItem from="1689592261059" duration="2536000" />
+      <workItem from="1690082723758" duration="5484000" />
+      <workItem from="1690121473394" duration="752000" />
+      <workItem from="1690164621298" duration="799000" />
+      <workItem from="1690690850511" duration="6467000" />
+      <workItem from="1690769413057" duration="3925000" />
     </task>
     <servers />
   </component>
@@ -89,6 +144,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python$commentup.coverage" NAME="commentup Coverage Results" MODIFIED="1680791655287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
+    <SUITE FILE_PATH="coverage/Python$1753.coverage" NAME="1753 Coverage Results" MODIFIED="1688356748649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solving" />
+    <SUITE FILE_PATH="coverage/Python$3049.coverage" NAME="3049 Coverage Results" MODIFIED="1688360437343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solving" />
+    <SUITE FILE_PATH="coverage/Python$1475.coverage" NAME="1475 Coverage Results" MODIFIED="1688358884546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solving" />
     <SUITE FILE_PATH="coverage/Python$ip.coverage" NAME="ip Coverage Results" MODIFIED="1679403944641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
     <SUITE FILE_PATH="coverage/Python$seleniumlogin.coverage" NAME="seleniumlogin Coverage Results" MODIFIED="1681094580254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
     <SUITE FILE_PATH="coverage/Python$newscommentcrawl.coverage" NAME="newscommentcrawl Coverage Results" MODIFIED="1681360896045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
