@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Style Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #111;
+        }
+
+        .main-poster {
+            position: relative;
+            height: 60vh;
+            background: url('gravity.jpg') center/cover no-repeat;
+        }
+
+        .main-poster-content {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .movie-row {
+            display: flex;
+            overflow-x: scroll;
+            padding: 20px;
+        }
+
+        .movie-poster {
+            width: 150px;
+            margin-right: 16px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .movie-poster:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-poster">
+    <div class="main-poster-content">
+        <h1>Gravity</h1>
+        <p>gravity</p>
+    </div>
+</div>
+<h2 style="color:aliceblue">Netflix movies</h2>
+<div class="movie-row">
+    <img src="theNun.png" alt="Movie 1" class="movie-poster">
+    <img src="theNun.png" alt="Movie 2" class="movie-poster">
+    <img src="theNun.png" alt="Movie 3" class="movie-poster">
+    <img src="theNun.png" alt="Movie 4" class="movie-poster">
+    <img src="theNun.png" alt="Movie 5" class="movie-poster">
+    <img src="theNun.png" alt="Movie 6" class="movie-poster">
+    <img src="theMoon.png" alt="Movie 7" class="movie-poster">
+    <img src="theMoon.png" alt="Movie 8" class="movie-poster">
+</div>
+
+</body>
+</html>
