@@ -1,4 +1,4 @@
-# 좆외밭
+# 외밭
 import sys
 input = sys.stdin.readline
 
@@ -11,7 +11,7 @@ for i in range(6):
     d, l = map(int, input().split())
     dir.append(d)
     len.append(l)
-
+s
 big_len = []
 small_len = []
 

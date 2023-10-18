@@ -6,3 +6,5 @@ migrations/
 /Django/.env.prod
 /Django/.env.prod.db
 chromedriver_mac_arm64.zip
+application.preperties
+
