@@ -1,0 +1,11 @@
+import zlib
+
+compressed_data = b"\x9c\x15\xcc\xcb\t\x800\x14D\xd1V\xa6\x00\r*6`\x01\xa2`\x05Q\x86$\xf0\xe2\x0b\xf9,\xec^\xdd\xdd\xb3\xb9\xbb\xd0\x16" b"32\x9e\xcc\xc6\xa0z\"\x89\xbd\x88P0\xcdC\x87M\x9e\x98\xc2\xd5g\xedp\xe8\xed\x92\xed]\xfb\x92\xda\x04\xb6b\x1c\x97\x15\x85\xc4\xa3\xed\xf7\x7f\xf0Z)/\xba\x95\x1f\x17"
+
+for wbits in [-zlib.MAX_WBITS, zlib.MAX_WBITS]:
+    try:
+        decompressed_data = zlib.decompress(compressed_data, wbits)
+        print(decompressed_data.decode('utf-8'))
+        break
+    except zlib.error as e:
+        print(f"An error occurred with wbits={wbits}: {e}")
