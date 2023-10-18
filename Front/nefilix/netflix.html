@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Style Layout</title>
+    <title>Netflix</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,10 +13,16 @@
         }
 
         .main-poster {
+            transition: transform 1s ease-in;
             position: relative;
             height: 60vh;
             background: url('gravity.jpg') center/cover no-repeat;
         }
+        .main-poster:hover {
+            transform: scale(1.1);
+            transition: transform 5s ease-out;
+        }
+
 
         .main-poster-content {
             position: absolute;
@@ -40,7 +46,7 @@
         }
 
         .movie-poster:hover {
-            transform: scale(1.1);
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -49,7 +55,9 @@
 <div class="main-poster">
     <div class="main-poster-content">
         <h1>Gravity</h1>
-        <p>gravity</p>
+        <p>Gravity is a 2013 science fiction thriller film directed by Alfonso Cuarón, who also co-wrote, 
+            co-edited, and produced the film. It stars Sandra Bullock and George Clooney as American astronauts 
+            who attempt to return to Earth after the destruction of their Space Shuttle in orbit.</p>
     </div>
 </div>
 <h1 style="color:antiquewhite;">Netflix movies</h1>
