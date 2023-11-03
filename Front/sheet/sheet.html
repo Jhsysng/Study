@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스프레드시트 예제</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed; 
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            overflow: hidden;
+        }
+        th {
+            background-color: #ccc; 
+        }
+        .highlight-column, .highlight-row {
+            background-color: #a8d5ff;
+        }
+        .selected {
+            border: 2px solid #000; 
+        }
+    </style>
+</head>
+<body>
+    <div>Cell: <span id="selectedCellCoords">없음</span></div>
+    <button onclick="exportToCSV()">CSV로 내보내기</button>
+    <table></table>
+
+    <script>
+        const table = document.querySelector('table');
+        const selectedCellCoords = document.querySelector('#selectedCellCoords');
+        const headers = ["#", "A", "B", "C", "D", "E", "F", "G", "H", "I"];
+        const rows = 9;
+
+        for(let i = 0; i <= rows; i++) {
+            const tr = document.createElement('tr');
+            for(let j = 0; j < headers.length; j++) {
+                if (i === 0 || j === 0) {
+                    const th = document.createElement('th');
+                    th.innerText = i === 0 ? headers[j] : i;
+                    tr.appendChild(th);
+                } else {
+                    const td = document.createElement('td');
+                    td.contentEditable = true;
+                    td.addEventListener('focus', highlightCurrentRowAndColumn);
+                    td.addEventListener('blur', clearSelectedCell);
+                    tr.appendChild(td);
+                }
+            }
+            table.appendChild(tr);
+        }
+
+        function highlightCurrentRowAndColumn(event) {
+            clearHighlight();
+            const td = event.target;
+            const tr = td.parentElement;
+            const rowIndex = Array.from(tr.parentElement.children).indexOf(tr);
+            const cellIndex = Array.from(tr.children).indexOf(td);
+
+            // Highlight the header column and row
+            table.rows[0].cells[cellIndex].classList.add('highlight-column');
+            table.rows[rowIndex].cells[0].classList.add('highlight-row');
+            
+            // Highlight the selected cell
+            td.classList.add('selected');
+
+            // Display the coordinates of the selected cell
+            selectedCellCoords.textContent = `${headers[cellIndex]}${rowIndex}`;
+        }
+
+        function clearHighlight() {
+            document.querySelectorAll('.highlight-column, .highlight-row, .selected').forEach(cell => {
+                cell.classList.remove('highlight-column', 'highlight-row', 'selected');
+            });
+        }
+
+        function clearSelectedCell(event) {
+            event.target.classList.remove('selected');
+            selectedCellCoords.textContent = '없음';
+        }
+
+        function exportToCSV() {
+            let csv = [];
+            for(let i = 0; i < table.rows.length; i++) {
+                let row = [];
+                for(let j = 0; j < table.rows[i].cells.length; j++) {
+                    row.push(table.rows[i].cells[j].innerText);
+                }
+                csv.push(row.join(','));
+            }
+            let csvData = new Blob([csv.join('\n')], { type: 'text/csv' });
+            let csvUrl = URL.createObjectURL(csvData);
+            let a = document.createElement('a');
+            a.href = csvUrl;
+            a.download = 'spreadsheet.csv';
+            a.click();
+        }
+    </script>
+</body>
+</html>
