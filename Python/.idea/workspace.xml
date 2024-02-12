@@ -1,85 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e439e574-06f7-4789-83b4-530298d84f32" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TEST/pdf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/1052.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/memory-v1/src/main/java/memory/Memory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/memory-v1/src/main/java/memory/MemoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/memory-v1/src/main/java/memory/MemoryFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/memory-v1/src/test/java/memory/MemoryFinderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/memory-v2/src/main/java/memory/MemoryAutoConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/memory-v2/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigrure.AutoConfiguration.imports" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/project-v1/libs/memory-v1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/project-v1/src/main/java/hello/config/MemoryConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/project-v1/src/main/java/hello/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/1003.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/1003.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/1138.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/1138.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/1309.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/1309.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/14503.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/14503.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/1485.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/1485.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/14891.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/14891.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/1931.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/1931.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/1987.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/1987.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/2477.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/2477.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/2564.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/2564.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/5546.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/5546.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/5567.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/5567.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving/7568.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving/7568.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityAuthJWT/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityAuthJWT/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityAuthJWT/src/main/java/com/example/ssecurityauthjwt/config/AuthServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityAuthJWT/src/main/java/com/example/ssecurityauthjwt/config/AuthServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh10/src/main/java/com/example/ssecuritych10/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh10/src/main/java/com/example/ssecuritych10/config/ProjectConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh10/src/main/java/com/example/ssecuritych10/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh10/src/main/java/com/example/ssecuritych10/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh10/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh10/src/main/resources/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/config/ProjectConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/data/entity/Otp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/data/entity/Otp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/data/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/data/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/data/repository/OtpRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/data/repository/OtpRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/data/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/data/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/service/GenerateCodeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/service/GenerateCodeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/java/com/example/ssecuritych11/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh11/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh3/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh3/src/main/java/com/example/ssecuritych3/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh3/src/main/java/com/example/ssecuritych3/config/ProjectConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh3/src/main/java/com/example/ssecuritych3/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh3/src/main/java/com/example/ssecuritych3/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh3/src/main/java/com/example/ssecuritych3/security/CustomAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh3/src/main/java/com/example/ssecuritych3/security/CustomAuthenticationProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh3/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh3/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/config/ProjectConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/config/security/AuthenticationLoggingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/config/security/AuthenticationLoggingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/config/security/CsrfTokenLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/config/security/CsrfTokenLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/config/security/RequestValidationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/config/security/RequestValidationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/config/security/StaticKeyAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/config/security/StaticKeyAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityCh7/src/main/java/com/example/ssecuritych7/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/ProjectConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/AuthenticationServerProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/AuthenticationServerProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/InitialAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/InitialAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/OtpAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/OtpAuthentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/OtpAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/OtpAuthenticationProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/UsernamePasswordAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/UsernamePasswordAuthentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/UsernamePasswordAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/config/security/UsernamePasswordAuthenticationProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityJWT/src/main/java/com/example/ssecurityjwt/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityOAuth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityOAuth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityOAuth/src/main/java/com/example/ssecurityoauth/config/AuthServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityOAuth/src/main/java/com/example/ssecurityoauth/config/AuthServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityOAuth/src/main/java/com/example/ssecurityoauth/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityOAuth/src/main/java/com/example/ssecurityoauth/config/ProjectConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityOAuth/src/main/java/com/example/ssecurityoauth/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityOAuth/src/main/java/com/example/ssecurityoauth/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SSecurityOAuth/src/main/java/com/example/ssecurityoauth/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SSecurityOAuth/src/main/java/com/example/ssecurityoauth/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SecurityCh5/src/main/java/com/example/securitych5/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SecurityCh5/src/main/java/com/example/securitych5/config/ProjectConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SecurityCh5/src/main/java/com/example/securitych5/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SecurityCh5/src/main/java/com/example/securitych5/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SpringJpaAdvanced" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SpringJpaAdvanced" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/config/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/config/ProjectConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/entity/Authority.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/entity/Authority.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/entity/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/entity/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/entity/EncryptionAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/entity/EncryptionAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/data/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/model/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/model/CustomUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/service/JpaUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/service/JpaUserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/java/com/example/ssecuritych6/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/SsecurityCh6/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React/react-todo-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../React/react-todo-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React/react-todo-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../React/react-todo-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React/react-todo-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../React/react-todo-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React/react-todo-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React/react-todo-app/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +45,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2NKDW9hWiQga0o7FW46WvIOyocv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -115,14 +59,28 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/alex/git/Study/Python/Crawling/crawl&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/alex/Library/CloudStorage/OneDrive-dongguk.edu/Data/Study/git/Study/Python&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Crawling/crawl" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -164,6 +122,9 @@
       <workItem from="1693220466326" duration="3018000" />
       <workItem from="1694245130718" duration="1402000" />
       <workItem from="1694394030949" duration="553000" />
+      <workItem from="1707735270067" duration="2143000" />
+      <workItem from="1707738063457" duration="577000" />
+      <workItem from="1707740214342" duration="5000" />
     </task>
     <servers />
   </component>
