@@ -5,22 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e439e574-06f7-4789-83b4-530298d84f32" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/solving/1052.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/memory-v1/src/main/java/memory/Memory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/memory-v1/src/main/java/memory/MemoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/memory-v1/src/main/java/memory/MemoryFinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/memory-v1/src/test/java/memory/MemoryFinderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/memory-v2/src/main/java/memory/MemoryAutoConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/memory-v2/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigrure.AutoConfiguration.imports" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/project-v1/libs/memory-v1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/project-v1/src/main/java/hello/config/MemoryConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Spring/project-v1/src/main/java/hello/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solving/1074.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/autoconfig/src/test/java/hello/selector/HelloBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/autoconfig/src/test/java/hello/selector/HelloConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/autoconfig/src/test/java/hello/selector/HelloImportSelector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/project-v2/libs/memory-v2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/project-v2/src/main/java/hello/controller/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../React/react-todo-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../React/react-todo-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../React/react-todo-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../React/react-todo-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../React/react-todo-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../React/react-todo-app/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../React/react-todo-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React/react-todo-app/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,22 +45,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/alex/Library/CloudStorage/OneDrive-dongguk.edu/Data/Study/git/Study/Python&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.1074.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/alex/Library/CloudStorage/OneDrive-dongguk.edu/Data/Study/git/Study/Python",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Crawling/crawl" />
@@ -125,6 +117,7 @@
       <workItem from="1707735270067" duration="2143000" />
       <workItem from="1707738063457" duration="577000" />
       <workItem from="1707740214342" duration="5000" />
+      <workItem from="1707806900197" duration="3931000" />
     </task>
     <servers />
   </component>
@@ -144,13 +137,14 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python$commentup.coverage" NAME="commentup Coverage Results" MODIFIED="1680791655287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
+    <SUITE FILE_PATH="coverage/Python$1074.coverage" NAME="1074 Coverage Results" MODIFIED="1707809360796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solving" />
     <SUITE FILE_PATH="coverage/Python$1753.coverage" NAME="1753 Coverage Results" MODIFIED="1688356748649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solving" />
     <SUITE FILE_PATH="coverage/Python$3049.coverage" NAME="3049 Coverage Results" MODIFIED="1688360437343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solving" />
+    <SUITE FILE_PATH="coverage/Python$seleniumlogin.coverage" NAME="seleniumlogin Coverage Results" MODIFIED="1681094580254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
     <SUITE FILE_PATH="coverage/Python$1475.coverage" NAME="1475 Coverage Results" MODIFIED="1688358884546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/solving" />
     <SUITE FILE_PATH="coverage/Python$ip.coverage" NAME="ip Coverage Results" MODIFIED="1679403944641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Network" />
-    <SUITE FILE_PATH="coverage/Python$seleniumlogin.coverage" NAME="seleniumlogin Coverage Results" MODIFIED="1681094580254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
-    <SUITE FILE_PATH="coverage/Python$newscommentcrawl.coverage" NAME="newscommentcrawl Coverage Results" MODIFIED="1681360896045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
-    <SUITE FILE_PATH="coverage/Python$seleniumcrawl.coverage" NAME="seleniumcrawl Coverage Results" MODIFIED="1680968468374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
     <SUITE FILE_PATH="coverage/Python$bsitemcrawl.coverage" NAME="bsitemcrawl Coverage Results" MODIFIED="1681361010411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
+    <SUITE FILE_PATH="coverage/Python$seleniumcrawl.coverage" NAME="seleniumcrawl Coverage Results" MODIFIED="1680968468374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
+    <SUITE FILE_PATH="coverage/Python$newscommentcrawl.coverage" NAME="newscommentcrawl Coverage Results" MODIFIED="1681360896045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Crawling/crawl" />
   </component>
 </project>
