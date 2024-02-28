@@ -14,4 +14,3 @@ for i in lst:
     heapq.heappop(p_list)
 
 print(sum(p_list))
-
