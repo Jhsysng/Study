@@ -3,6 +3,7 @@ package study.querydsl;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.QueryResults;
 import com.querydsl.core.Tuple;
+import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.core.types.dsl.Expressions;
@@ -18,8 +19,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-import study.querydsl.dto.MemberDto;
-import study.querydsl.dto.QMemberDto;
+import study.querydsl.dto.*;
 import study.querydsl.entity.Member;
 import study.querydsl.entity.QMember;
 import study.querydsl.entity.Team;
@@ -27,6 +27,8 @@ import study.querydsl.entity.Team;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.springframework.util.ObjectUtils.isEmpty;
+import static org.springframework.util.StringUtils.hasText;
 import static study.querydsl.entity.QMember.member;
 import static study.querydsl.entity.QTeam.team;
 
@@ -366,25 +368,7 @@ public class QuerydslBasicTest {
                 .fetch();
     }
 
-    @Test
-    public void dynamicQuery_WhereParam(){
-        String usernameParam = "member1";
-        Integer ageParam = 10;
 
-        List<Member> result = searchMember2(usernameParam, ageParam);
-        assertThat(result.size()).isEqualTo(1);
-    }
-
-    private List<Member> searchMember2(String usernameCond, Integer ageCond){
-        return queryFactory
-                .selectFrom(member)
-                .where(usernameEq(usernameCond), ageEq(ageCond))
-                .fetch();
-    }
-
-    private BooleanExpression usernameEq(String usernameCond){
-        return usernameCond != null ? member.username.eq(usernameCond) : null;
-    }
 
     private BooleanExpression ageEq(Integer ageCond){
         return ageCond != null ? member.age.eq(ageCond) : null;
