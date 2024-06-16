@@ -11,6 +11,7 @@ import study.jpashop.domain.item.Item;
 import study.jpashop.repository.ItemRepository;
 import study.jpashop.repository.MemberRepository;
 import study.jpashop.repository.OrderRepository;
+import study.jpashop.repository.OrderSearch;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class OrderService {
     * 주문
      */
     @Transactional
-    public Long Order(Long memberId, Long itemId, int count) {
+    public Long order(Long memberId, Long itemId, int count) {
         //엔티티 조회
         Member member = memberRepository.findOne(memberId);
         Item item = itemRepository.findOne(itemId);
@@ -57,8 +58,9 @@ public class OrderService {
         order.cancel();
     }
 
-//    // 검색
-//    public List<Order> findOrders(OrderSearch orderSearch) {
-//        return orderRepository.findAll(orderSearch);
-//    }
+    // 검색
+    public List<Order> findOrders(OrderSearch orderSearch) {
+
+        return orderRepository.findAll(orderSearch);
+    }
 }
