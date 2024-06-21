@@ -13,7 +13,7 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
-@Table(name = "order")
+@Table(name = "order_table")
 public class Order {
 
     @Id @GeneratedValue
