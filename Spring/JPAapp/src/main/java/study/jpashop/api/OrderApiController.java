@@ -1,5 +1,6 @@
 package study.jpashop.api;
 
+import jakarta.persistence.EntityManager;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class OrderApiController {
     private final OrderRepository orderRepository;
+    private final EntityManager em;
 
     @GetMapping("/api/v1/orders")
     public List<Order> ordersV1() {
@@ -39,6 +41,15 @@ public class OrderApiController {
                 .map(OrderDto::new)
                 .collect(Collectors.toList());
     }
+
+    @GetMapping("/api/v3/orders")
+    public List<OrderDto> ordersV3() {
+        List<Order> orders = orderRepository.findAllWithItem();
+        return orders.stream()
+                .map(OrderDto::new)
+                .collect(Collectors.toList());
+    }
+
 
     @Getter
     static class OrderDto {
