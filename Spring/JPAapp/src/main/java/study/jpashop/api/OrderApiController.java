@@ -4,12 +4,15 @@ import jakarta.persistence.EntityManager;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import study.jpashop.domain.Address;
 import study.jpashop.domain.Order;
 import study.jpashop.domain.OrderItem;
 import study.jpashop.domain.OrderStatus;
 import study.jpashop.repository.OrderRepository;
+import study.jpashop.repository.order.query.OrderQueryDto;
+import study.jpashop.repository.order.query.OrderQueryRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -19,6 +22,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class OrderApiController {
     private final OrderRepository orderRepository;
+    private final OrderQueryRepository orderQueryRepository;
     private final EntityManager em;
 
     @GetMapping("/api/v1/orders")
@@ -48,6 +52,23 @@ public class OrderApiController {
         return orders.stream()
                 .map(OrderDto::new)
                 .collect(Collectors.toList());
+    }
+
+    @GetMapping("/api/v3.1/orders")
+    public List<OrderDto> ordersV3_page(@RequestParam(value="offset", defaultValue =  "0" ) int offset,
+                                        @RequestParam(value="limit", defaultValue = "100") int limit) {
+        List<Order> orders = orderRepository.findAllWithMemberDelivery(offset, limit);
+
+        List<OrderDto> result = orders.stream()
+                .map(OrderDto::new)
+                .toList();
+
+        return result;
+    }
+
+    @GetMapping("/api/v4/orders")
+    public List<OrderQueryDto> ordersV4() {
+        return orderQueryRepository.findOrderQueryDtos();
     }
 
 
