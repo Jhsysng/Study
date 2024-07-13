@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import study.jpashop.domain.OrderItem;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Repository
 @RequiredArgsConstructor
@@ -41,5 +43,28 @@ public class OrderQueryRepository {
                 .getResultList();
     }
 
-    
+
+    public List<OrderQueryDto> findAllByDto_optimization() {
+        List<OrderQueryDto> result = findOrders();
+
+        List<Long> orderIds = result.stream()
+                        .map(OrderQueryDto::getOrderId)
+                        .toList();
+
+        List<OrderItemQueryDto> orderItems = em.createQuery(
+                "select new study.jpashop.repository.order.query.OrderItemQueryDto(oi.order.id, i.name, oi.orderPrice, oi.count)"+
+                        " from OrderItem oi" +
+                        " join oi.item i" +
+                        " where oi.order.id = :orderId", OrderItemQueryDto.class)
+                .setParameter("orderId", orderIds)
+                .getResultList();
+
+        Map<Long, List<OrderItemQueryDto>> orderItemMap = orderItems.stream()
+                .collect(Collectors.groupingBy(OrderItemQueryDto::getOrderId));
+
+        result.forEach(o -> o.setOrderItems(orderItemMap.get(o.getOrderId())));
+
+        return result;
+    }
+
 }
