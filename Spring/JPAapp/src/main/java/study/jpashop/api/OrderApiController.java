@@ -11,7 +11,9 @@ import study.jpashop.domain.Order;
 import study.jpashop.domain.OrderItem;
 import study.jpashop.domain.OrderStatus;
 import study.jpashop.repository.OrderRepository;
+import study.jpashop.repository.order.query.OrderFlatDto;
 import study.jpashop.repository.order.query.OrderQueryDto;
+import study.jpashop.repository.order.query.OrderItemQueryDto;
 import study.jpashop.repository.order.query.OrderQueryRepository;
 
 import java.time.LocalDateTime;
@@ -78,7 +80,14 @@ public class OrderApiController {
 
     @GetMapping("/api/v6/orders")
     public List<OrderQueryDto> ordersV6() {
-        return orderQueryRepository.findAllByDto_flat();
+        List<OrderFlatDto> flats = orderQueryRepository.findAllByDto_flat();
+
+        return flats.stream()
+                .collect(Collectors.groupingBy(o -> new OrderQueryDto(o.getOrderId(), o.getName(), o.getOrderDate(), o.getOrderStatus(), o.getAddress()),
+                        Collectors.mapping(o -> new OrderItemQueryDto(o.getOrderId(), o.getItemName(), o.getOrderPrice(), o.getCount()), Collectors.toList())))
+                .entrySet().stream()
+                .map(e -> new OrderQueryDto(e.getKey().getOrderId(), e.getKey().getName(), e.getKey().getOrderDate(), e.getKey().getOrderStatus(), e.getKey().getAddress(), e.getValue()))
+                .collect(Collectors.toList());
     }
 
 

@@ -1,6 +1,7 @@
 package study.jpashop.repository.order.query;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import study.jpashop.domain.Address;
 import study.jpashop.domain.OrderStatus;
 
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
+@EqualsAndHashCode(of = "orderId")
 public class OrderQueryDto {
     private Long orderId;
     private String name;
