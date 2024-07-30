@@ -1,6 +1,9 @@
 package hello.itemservice.domain.item;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 public class Item {
@@ -9,6 +12,11 @@ public class Item {
     private String itemName;
     private Integer price;
     private Integer quantity;
+
+    private Boolean open;
+    private List<String> regions;
+    private ItemType itemType;
+    private String deliveryCode;
 
     public Item() {
     }
