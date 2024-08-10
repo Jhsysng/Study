@@ -38,13 +38,13 @@ public class ValidationItemControllerV1 {
         return "validation/v1/item";
     }
 
-    @GetMapping("/add")
+    //@GetMapping("/add")
     public String addForm(Model model) {
         model.addAttribute("item", new Item());
         return "validation/v1/addForm";
     }
 
-    @PostMapping("/add")
+    //@PostMapping("/add")
     public String addItem(@ModelAttribute Item item, RedirectAttributes redirectAttributes, Model model) {
 
         //검증 오류 결과를 보관
