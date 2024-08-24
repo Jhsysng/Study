@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Slf4j
 @Repository
-public class MemberRepoository {
+public class MemberRepository {
 
         private static Map<Long, Member> store = new HashMap<>();
         private static long sequence = 0L;
