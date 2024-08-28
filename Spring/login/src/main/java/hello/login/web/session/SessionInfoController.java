@@ -25,5 +25,7 @@ public class SessionInfoController {
         log.info("creationTime={}", session.getCreationTime());
         log.info("lastAccessedTime={}", session.getLastAccessedTime());
         log.info("isNew={}", session.isNew());
+
+        return null;
     }
 }
