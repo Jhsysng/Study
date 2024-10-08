@@ -3,3 +3,4 @@
 .sh
 docker-compose.yml
 .yml
+env.sh
