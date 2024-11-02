@@ -3,4 +3,4 @@ FROM node:20.11.0-alpine
 WORKDIR /usr/src/app
 COPY package*.json ./
 
-CMD npm config set cache-min 9999999 && npm install --only=development && npm run start:dev
+CMD npm config set cache-min 9999999 && npx wait-port rabbit:5672 && npm install --only=development && npm run start:dev
