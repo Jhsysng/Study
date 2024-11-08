@@ -7,3 +7,4 @@ env.sh
 node_modules
 */node_modules
 */node_modules/*
+.terraform
