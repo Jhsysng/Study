@@ -30,7 +30,7 @@ resource "aws_iam_role" "flixtube_role" {
 
 # ECR 리포지토리 정책 - 동적으로 IAM 역할 ARN을 참조
 resource "aws_ecr_repository_policy" "flixtube_policy" {
-  repository = aws_ecr_repository.example.name
+  repository = aws_ecr_repository.flixtube.name
 
   policy = jsonencode({
     Version = "2012-10-17",

@@ -9,17 +9,21 @@ variable location {
 }
 
 
-variable "vpc_id" {
-  description = "EKS 클러스터가 배포될 VPC ID"
-  type        = string
+# 기본 VPC 가져오기
+data "aws_vpc" "default" {
+  default = true
 }
 
-variable "subnet_ids" {
-  description = "EKS 클러스터의 서브넷 ID 목록"
-  type        = list(string)
+# 기본 VPC의 서브넷 가져오기
+data "aws_subnets" "default" {
+  filter {
+    name   = "vpc-id"
+    values = [data.aws_vpc.default.id]
+  }
 }
 
-variable "ec2_key_pair_name" {
-  description = "EC2 인스턴스 접근을 위한 키 페어 이름"
-  type        = string
+# 로컬 변수로 기본 VPC 및 서브넷 ID 설정
+locals {
+  vpc_id     = data.aws_vpc.default.id
+  subnet_ids = data.aws_subnets.default.ids
 }
