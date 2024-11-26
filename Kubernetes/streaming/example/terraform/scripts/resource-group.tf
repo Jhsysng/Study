@@ -1,10 +1,5 @@
 # resource_group.tf
 
-provider "aws" {
-  region = var.location
-  profile = "screenshot161-cli"
-}
-
 # 리소스 그룹 생성
 resource "aws_resourcegroups_group" "terraform-example" {
   name        = var.app_name
