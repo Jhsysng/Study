@@ -1,5 +1,6 @@
 package hello.apigatewayservice.config;
 
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
@@ -26,8 +27,11 @@ public class CustomFilter extends AbstractGatewayFilterFactory<CustomFilter.Conf
                 log.info("Custom POST filter: request uri -> {}" , request.getURI());
             }));
         });
-    }
 
-    public class Config {
+
+    }
+    @Data
+    public static class Config {
+
     }
 }

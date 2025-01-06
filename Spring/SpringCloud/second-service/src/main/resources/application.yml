@@ -1,6 +1,6 @@
 spring:
   application:
-    name: second-service
+    name: my-second-service
 
 eureka:
   client:
