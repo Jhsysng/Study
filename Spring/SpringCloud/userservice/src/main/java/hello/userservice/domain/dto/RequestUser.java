@@ -25,4 +25,12 @@ public class RequestUser {
     @Size(min = 2, message = "Name must be equal or greater than 2 characters")
     private String name;
 
+    public UserDto toDto() {
+        return UserDto.builder()
+                .email(email)
+                .password(password)
+                .name(name)
+                .build();
+    }
+
 }

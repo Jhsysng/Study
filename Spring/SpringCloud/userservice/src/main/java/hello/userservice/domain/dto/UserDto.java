@@ -1,16 +1,17 @@
 package hello.userservice.domain.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
-@Getter
+
 @Builder
+@NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class UserDto {
     private String email;
     private String password;
@@ -18,4 +19,6 @@ public class UserDto {
     private String userId;
     private LocalDate createdAt;
     private String encryptedPwd;
+
+    private List<ResponseOrder> orders;
 }
