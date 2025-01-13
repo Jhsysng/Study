@@ -17,6 +17,14 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/user-service/**
+        - id: catalog-service
+          uri: lb://catalog-service
+          predicates:
+            - Path=/catalog-service/**
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+              - Path=/order-service/**
       default-filters:
         - name: LoggingFilter
           args:
