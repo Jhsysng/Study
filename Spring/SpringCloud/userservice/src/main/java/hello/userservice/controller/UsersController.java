@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user-service")
+@RequestMapping("/")
 @Slf4j
 public class UsersController {
 
@@ -75,6 +75,9 @@ public class UsersController {
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 
-
+    @PostMapping("/users/login")
+    public String login(@RequestBody RequestUser user){
+        return "login";
+    }
 
 }
