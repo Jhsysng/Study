@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/")
@@ -35,7 +36,18 @@ public class UsersController {
     }
     @GetMapping("/health_check")
     public String status() {
-        return "It's Working in User Service on PORT " + env.getProperty("local.server.port");
+        return String.format(
+                "It's Working in User Service on PORT %s, " +
+                        "port(local.server.port)=%s, " +
+                        "port(server.port)=%s, " +
+                        "token secret=%s, " +
+                        "token expiration time=%s",
+                Objects.requireNonNullElse(env.getProperty("local.server.port"), "Unknown"),
+                Objects.requireNonNullElse(env.getProperty("local.server.port"), "Unknown"),
+                Objects.requireNonNullElse(env.getProperty("server.port"), "Unknown"),
+                Objects.requireNonNullElse(env.getProperty("token.secret"), "Not Set"),
+                Objects.requireNonNullElse(env.getProperty("token.expiration_time"), "Not Set")
+        );
     }
 
     @GetMapping("/welcome")

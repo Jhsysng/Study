@@ -43,9 +43,10 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
+    //actuator
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     //sc bootstrap
-    implementation 'orgi.springframework.cloud:spring-cloud-starter-bootstrap'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
     //sc config
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
 
