@@ -19,6 +19,11 @@ spring:
       settings:
         web-allow-others: true
       path: /h2-console
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 greeting:
   message: Welcome to the Simple Ecommerce User Service
 eureka:
@@ -42,4 +47,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, httptrace
+        include: refresh, health, beans, httptrace, busrefresh
