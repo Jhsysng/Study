@@ -33,7 +33,7 @@ public class 도시분할계획{
                 totalWeight += tmpEdge.weight;
                 maxWeights.add(tmpEdge.weight);
                 edgeCount++;
-                if(edgeCount == v-1){
+                if(edgeCount == edge-1){
                     break;
                 }
             }
