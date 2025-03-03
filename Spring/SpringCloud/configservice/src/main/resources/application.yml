@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: true
+        native:
+          search-locations: /Users/alex/Library/CloudStorage/OneDrive-dongguk.edu/Data/Study/inflearn/Spring/springcloudconfig
+        git:
+          uri: file:///Users/alex/Library/CloudStorage/OneDrive-dongguk.edu/Data/Study/inflearn/Spring/springcloudconfig
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
