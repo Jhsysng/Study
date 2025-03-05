@@ -1,5 +1,6 @@
 package hello.userservice.service.impl;
 
+import hello.userservice.client.OrderServiceClient;
 import hello.userservice.domain.dto.ResponseOrder;
 import hello.userservice.domain.dto.UserDto;
 import hello.userservice.domain.entity.UserEntity;
@@ -26,6 +27,7 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder bCryptPasswordEncoder;
+    private final OrderServiceClient orderServiceClient;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

@@ -52,6 +52,9 @@ dependencies {
     //sc bus rabbitmq
     implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
 
+    // feign
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
     //jwt
     implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2'
