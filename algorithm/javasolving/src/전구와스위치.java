@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.*;
 
 class 전구와스위치{
     public static void main(String[] args) throws Exception {
