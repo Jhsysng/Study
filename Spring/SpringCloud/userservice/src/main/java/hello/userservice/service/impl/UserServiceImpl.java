@@ -1,5 +1,6 @@
 package hello.userservice.service.impl;
 
+import feign.FeignException;
 import hello.userservice.client.OrderServiceClient;
 import hello.userservice.domain.dto.ResponseOrder;
 import hello.userservice.domain.dto.UserDto;
@@ -71,7 +72,13 @@ public class UserServiceImpl implements UserService {
         UserDto userDto = new ModelMapper().map(userEntity, UserDto.class);
 
         List<UserDto> userDtoList = List.of(userDto);
-        List<ResponseOrder> orderList = orderServiceClient.getOrders(userId);
+        List<ResponseOrder> orderList = null;
+        try {
+            orderList = orderServiceClient.getOrders(userId);
+        } catch (FeignException e) {
+            log.error("Error occurred while calling order service: {}", e.getMessage());
+            throw new RuntimeException(e);
+        }
         userDto.setOrders(orderList);
         return userDto;
     }
